@@ -95,7 +95,7 @@ def histogram_cell(magnitude,direction,num_bins = 9):
     bin_pos_upper = np.floor(np.divide(direction,20)).astype(int)
 
     bin_pos_lower = bin_pos_lower%num_bins
-    bin_pos_higher = bin_pos_lower%num_bins
+    bin_pos_upper = bin_pos_upper%num_bins
 
     lower_percentage = np.multiply(np.divide(np.abs(np.subtract(direction%160,20*bin_pos_lower)),20),magnitude)
     higher_percentage = magnitude - lower_percentage
